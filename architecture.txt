@@ -52,6 +52,23 @@ Voici un rappel bref des différents concepts et étapes pour la partie backend 
     
     # Insérer des données
     INSERT INTO utilisateurs (nom) VALUES ('Alice');
+
+** Vérifier les ports ouverts sur votre machine : sudo netstat -tuln
+**Explications des options de commandes** :
+** docker-compose up -d --build :
+up : Démarre les containers définis dans le fichier docker-compose.yml.
+-d : Démarre les containers en arrière-plan (mode détaché).
+--build : Reconstruit les images avant de démarrer les containers.
+
+
+**Lister les bases de données **: \l
+**Se connecter à une base de données **: \c mydatabase
+**Lister les tables :\dt
+**Afficher la structure d'une table : \d nom_de_la_table
+**Mettre à jour des données :UPDATE users SET name = 'Jane Doe' WHERE email = 'john@example.com';
+** Assure-toi de rendre le script exécutable : chmod +x setup.sh
+**  executer  : ./setup.sh
+
     ```
 
 ### Apache Tomcat
