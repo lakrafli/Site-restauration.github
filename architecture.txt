@@ -146,3 +146,22 @@ Voici un rappel bref des différents concepts et étapes pour la partie backend 
     $stmt->execute(['nom' => 'Alice']);
     ```
 
+Utilisation de Fetch API dans JavaScript
+Exemple de requêtes HTTP avec Fetch API
+
+// GET request
+fetch('http://localhost:5000/users')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// POST request
+fetch('http://localhost:5000/user', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ name: 'Jane Doe', email: 'jane@example.com' }),
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+
