@@ -94,6 +94,43 @@ up : Démarre les containers définis dans le fichier docker-compose.yml.
     ./script.sh
     ```
 
+
+	Exemple complet
+**Création du fichier**
+
+nano setup.sh
+**Ajoute ce contenu dans 'setup.sh :**
+----------------------------------------- 
+#!/bin/bash
+
+# Démarrer Docker Compose
+
+docker-compose up -d --build
+
+**# Attendre que PostgreSQL soit prêt**
+sleep 10
+
+**# Exécuter les commandes SQL**
+docker exec -i <nom_du_container_postgres> psql -U user -d mydatabase <<EOF
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(80) NOT NULL,
+    email VARCHAR(120) UNIQUE NOT NULL
+);
+
+INSERT INTO users (name, email) VALUES ('John Doe', 'john@example.com');
+INSERT INTO users (name, email) VALUES ('Jane Doe', 'jane@example.com');
+EOF
+------------------------	---------------------------------------
+
+**Rendre le fichier exécutable**
+chmod +x setup.sh
+**Exécuter le fichier**
+
+./setup.sh
+
+
+
 ### PHP
 
 **Méthodes HTTP (POST, GET, PUT) et gestion de formulaires :**
