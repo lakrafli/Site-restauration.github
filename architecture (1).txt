@@ -1,0 +1,165 @@
+Voici un rappel bref des différents concepts et étapes pour la partie backend que vous avez mentionnée :
+
+### Docker
+
+**Mise en place de Docker :**
+1. **Dockerfile** : Fichier contenant les instructions pour construire une image Docker.
+    ```Dockerfile
+    # Exemple de Dockerfile
+    FROM node:14
+    WORKDIR /app
+    COPY . .
+    RUN npm install
+    CMD ["node", "app.js"]
+    ```
+
+2. **Build d'image Docker :**
+    ```sh
+    docker build -t nom_image .
+    ```
+
+3. **docker-compose.yml** : Fichier de configuration pour définir et gérer des applications multi-conteneurs.
+    ```yaml
+    version: '3'
+    services:
+      web:
+        build: .
+        ports:
+          - "5000:5000"
+    ```
+
+4. **Démarrer les conteneurs avec Docker Compose :**
+    ```sh
+    docker-compose up -d --build
+    ```
+
+### Base de Données
+
+**Commandes de base :**
+- **MySQL :**
+    ```sh
+    # Accéder au shell MySQL
+    mysql -u root -p
+    
+    # Créer une base de données
+    CREATE DATABASE nom_base;
+    
+    # Utiliser une base de données
+    USE nom_base;
+    
+    # Créer une table
+    CREATE TABLE utilisateurs (id INT AUTO_INCREMENT, nom VARCHAR(100), PRIMARY KEY(id));
+    
+    # Insérer des données
+    INSERT INTO utilisateurs (nom) VALUES ('Alice');
+    ```
+
+### Apache Tomcat
+
+**Trouver le port sur lequel se connecter :**
+- Par défaut, Apache Tomcat utilise le port 8080. Vous pouvez vérifier le port en consultant le fichier `server.xml` :
+    ```xml
+    <!-- server.xml -->
+    <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+    ```
+
+### Exécuter un fichier .sh (shell)
+
+1. **Donner les permissions d'exécution au fichier :**
+    ```sh
+    chmod +x script.sh
+    ```
+
+2. **Exécuter le fichier :**
+    ```sh
+    ./script.sh
+    ```
+
+### PHP
+
+**Méthodes HTTP (POST, GET, PUT) et gestion de formulaires :**
+- **GET :**
+    ```php
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $nom = $_GET['nom'];
+    }
+    ```
+
+- **POST :**
+    ```php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nom = $_POST['nom'];
+    }
+    ```
+
+- **PUT (nécessite des configurations supplémentaires) :**
+    ```php
+    parse_str(file_get_contents("php://input"), $_PUT);
+    if ($_SERVER["REQUEST_METHOD"] == "PUT") {
+        $nom = $_PUT['nom'];
+    }
+    ```
+
+### Requêtes HTTP
+
+**Exemple avec cURL :**
+- **GET :**
+    ```sh
+    curl -X GET http://example.com/api/resource
+    ```
+
+- **POST :**
+    ```sh
+    curl -X POST -d "param1=value1&param2=value2" http://example.com/api/resource
+    ```
+
+### Requêtes Base de Données (avec PDO en PHP)
+
+1. **Connexion à la base de données :**
+    ```php
+    $dsn = 'mysql:host=localhost;dbname=nom_base';
+    $username = 'root';
+    $password = '';
+    $options = [];
+
+    try {
+        $pdo = new PDO($dsn, $username, $password, $options);
+    } catch (PDOException $e) {
+        echo 'Connection failed: ' . $e->getMessage();
+    }
+    ```
+
+2. **Exécuter une requête SELECT :**
+    ```php
+    $stmt = $pdo->query("SELECT * FROM utilisateurs");
+    while ($row = $stmt->fetch()) {
+        echo $row['nom'] . "\n";
+    }
+    ```
+
+3. **Exécuter une requête INSERT :**
+    ```php
+    $sql = "INSERT INTO utilisateurs (nom) VALUES (:nom)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['nom' => 'Alice']);
+    ```
+
+
+
+
+# Initialiser le dépôt Git
+git init
+
+# Ajouter tous les fichiers au dépôt
+git add .
+
+# Commiter les fichiers
+git commit -m "Initial commit"
+
+# Lier le dépôt local à GitHub
+git remote add origin https://github.com/votre_nom_utilisateur/nom_depot.git
+
+# Pousser les changements vers GitHub
+git push -u origin master
