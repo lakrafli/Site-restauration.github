@@ -227,4 +227,4 @@ CONTAINER ID   IMAGE                                        COMMAND             
 9146a1e66df0   tp4_app_rest_dockerise_etudiant_postgresql   "su postgres -c '/us…"   About a minute ago   Up About a minute   0.0.0.0:4633->5432/tcp, :::4633->5432/tcp   tp4_app_rest_dockerise_etudiant_postgresql_1
 af9186d30083   tp4_app_rest_dockerise_etudiant_tomcat       "/opt/tomcat/bin/cat…"   About a minute ago   Up About a minute   0.0.0.0:6480->8080/tcp, :::6480->8080/tcp   tp4_app_rest_dockerise_etudian
 
-Quel est le nom du conteneur de base de données ?
+Donnez le nom de l'hôte ou son adresse IP tel que renvoyé par la commande que vous avez exécuté ?
