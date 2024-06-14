@@ -1,7 +1,59 @@
 **Voici un rappel bref des différents concepts et étapes pour la partie backend que vous avez mentionnée :**
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Formulaire pour ajouter un employé
+    const addEmployeeForm = document.getElementById('addEmployeeForm');
+    if (addEmployeeForm) {
+        addEmployeeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
 
+            fetch('http://localhost:6480/api/employees', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    address: address
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Employee added:', data);
+                alert('Employee added successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error adding employee.');
+            });
+        });
+    }
+
+    // Formulaire pour supprimer un employé
+    const deleteEmployeeForm = document.getElementById('deleteEmployeeForm');
+    if (deleteEmployeeForm) {
+        deleteEmployeeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const id = document.getElementById('id').value;
+
+            fetch(`http://localhost:6480/api/employees/${id}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Employee deleted:', data);
 
 
 
