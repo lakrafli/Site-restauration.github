@@ -270,3 +270,6 @@ INSERT 0 1
 INSERT 0 1
 INSERT 0 1
 
+Combien de tables ont été crée par le script ?
+
+Utilisez les chiffres ! Et pas d'espaces superflus !
