@@ -178,3 +178,26 @@ git remote add origin https://github.com/votre_nom_utilisateur/nom_depot.git
 
 # Pousser les changements vers GitHub
 git push -u origin master
+---------------------------------------------------------
+------------------- einfo--------------------------------
+Récapitulatifs des méthodes REST
+
+    Créer une nouvelle personne :
+
+POST/http://einfo-learning.fr/rest/person
+
+    Liste des personnes :
+
+GET/http://einfo-learning.fr/rest/person
+
+    Récupérer une personne :
+
+GET/http://einfo-learning.fr/rest/person/{id}
+
+    Modifier une personne :
+
+PUT/http://einfo-learning.fr/rest/person/{id}
+
+    Supprimer une personne :
+
+DELETE/http://einfo-learning.fr/rest/person/{id}
