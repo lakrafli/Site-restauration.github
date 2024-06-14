@@ -1,5 +1,21 @@
 **Voici un rappel bref des différents concepts et étapes pour la partie backend que vous avez mentionnée :**
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------
 document.addEventListener('DOMContentLoaded', function() {
     // Add Employee
     const addEmployeeForm = document.getElementById('addEmployeeForm');
