@@ -1,4 +1,52 @@
-js: employee.js;
+
+document.addEventListener('DOMContentLoaded', function() {
+    const baseUrl = 'http://IP_SERVEUR:PORT/tp_rest/api/employees';
+    const employeeList = document.getElementById('employee-list');
+
+    function loadEmployees() {
+        fetch(baseUrl)
+            .then(response => response.json())
+            .then(employees => {
+                employeeList.innerHTML = '';
+                for (let i = 0; i < employees.length; i++) {
+                    let emp = employees[i];
+                    let li = document.createElement('li');
+                    let name = document.createElement('p');
+                    name.textContent = emp.name;
+
+                    let button = document.createElement('button');
+                    button.textContent = 'Supprimer';
+                    button.id = emp.id;
+                    
+                    li.append(name);
+                    li.append(button);
+                    employeeList.append(li);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    employeeList.addEventListener('click', function(event) {
+        if (event.target.nodeName !== 'BUTTON') return;
+        const employeeId = event.target.id;
+        fetch(`${baseUrl}/${employeeId}`, {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            loadEmployees(); // Reload the list after deletion
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    // Initial load of employees
+    loadEmployees();
+});
+
+
+€€€€js: employee.js;
 for (let i = 0; i < enployees.length; 1+)%
 console. Log (enpLoyees (1).ad);
 let elen = docunent.createElement (*L*):
