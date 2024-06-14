@@ -276,6 +276,12 @@ Quelle est la requête que vous avez exécuter pour listez tous les employés
 
 **Note** : Donnez la version la plus courte, en utilisant l'opérateur `*` pour la projection.
 
+
+connecter dur bdd :Psql -h localhost -p 4633 -U postgres
+lnacer docker; docker-compose up -d --build
+
+le droit: 
+
 **En minuscules ! Et pas d'espaces superflus !**
 
 
