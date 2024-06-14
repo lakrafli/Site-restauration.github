@@ -1,6 +1,8 @@
 **Voici un rappel bref des différents concepts et étapes pour la partie backend que vous avez mentionnée :**
 
-
+URL de l'API REST: IP SERVEUR: port/tp_ api_
+• Liste tous les employées (JSON)
+_rest/api/employees
 document.addEventListener('DOMContentLoaded', function() {
     // Formulaire pour ajouter un employé
     const addEmployeeForm = document.getElementById('addEmployeeForm');
