@@ -228,4 +228,29 @@ CONTAINER ID   IMAGE                                        COMMAND             
 af9186d30083   tp4_app_rest_dockerise_etudiant_tomcat       "/opt/tomcat/bin/cat…"   About a minute ago   Up About a minute   0.0.0.0:6480->8080/tcp, :::6480->8080/tcp   tp4_app_rest_dockerise_etudian
 
 Donnez le nom de l'hôte ou son adresse IP tel que renvoyé par la commande que vous avez exécuté  : localhost 
-Quel est le port que nous devons utiliser à l'extérieur du conteneur (au niveau de l'hôte) pour communiquer avec le serveur de base de données
+Quel est le port que nous devons utiliser à l'extérieur du conteneur (au niveau de l'hôte) pour communiquer avec le serveur de base de données:4633
+
+
+
+
+
+**********
+Partie 1 - Partie backend : Test de la connexion
+
+Rappel : syntaxe de la commande de psql
+
+psql -h hote -d nom_base_donnees -p port_reseau -U nom_utilisateur
+
+Voici les informations pour se connecter à la base de données (pour l'hôte et le port d'écoute, vous les avez déterminez dans le questions précédentes) :
+
+base de donnee : devavance_db
+user : devavance_user
+
+Question : Connectez vous à la base de données. Affichez les tables éventuelles et expliquez le résultat.
+
+Note :
+
+    les options de la commande psql respecterons l'ordre donnée en exemple.
+    Vous refermerez la connexion après vos observations.
+
+
