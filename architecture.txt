@@ -277,3 +277,9 @@ Quelle est la requête que vous avez exécuter pour listez tous les employés
 **Note** : Donnez la version la plus courte, en utilisant l'opérateur `*` pour la projection.
 
 **En minuscules ! Et pas d'espaces superflus !**
+
+
+
+Apache Tomcat est un conteneur de servlets (application Web écrite en Java tournant dans le serveur). On parle aussi de serveur d'applications Web Java.
+
+Combien de services REST sont exposés par le serveur Tomcat
