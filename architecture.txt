@@ -1,4 +1,4 @@
-Voici un rappel bref des différents concepts et étapes pour la partie backend que vous avez mentionnée :
+**Voici un rappel bref des différents concepts et étapes pour la partie backend que vous avez mentionnée :**
 
 ### Docker
 
