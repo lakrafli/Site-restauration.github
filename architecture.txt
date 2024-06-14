@@ -289,3 +289,9 @@ le droit:
 Apache docker-compose up -d --build est un conteneur de servlets (application Web écrite en Java tournant dans le serveur). On parle aussi de serveur d'applications Web Java.
 
 Combien de services REST sont exposés par le serveur Tomcat
+Explication de la communication
+
+	•	Requêtes HTTP : Le frontend envoie des requêtes HTTP (GET, POST, PUT, DELETE) au backend.
+	•	Endpoints RESTful : Les endpoints sont définis pour chaque opération sur les employés.
+	•	Réponses du serveur : Le backend renvoie les données ou les messages de succès/erreur.
+	•	Gestion des données côté frontend : Le frontend met à jour l’interface utilisateur avec les données reçues.
