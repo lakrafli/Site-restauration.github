@@ -1,6 +1,69 @@
 js: employee.js;
 
+document.addEventListener('DOMContentLoaded', function() {
+    const baseUrl = 'http://IP_SERVEUR:PORT/tp_rest/api/employees';
 
+    // Formulaire pour ajouter un employé
+    const addEmployeeForm = document.getElementById('addEmployeeForm');
+    if (addEmployeeForm) {
+        addEmployeeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+
+            fetch(baseUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    address: address
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Employee added:', data);
+                alert('Employee added successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error adding employee.');
+            });
+        });
+    }
+
+    // Formulaire pour supprimer un employé
+    const deleteEmployeeForm = document.getElementById('deleteEmployeeForm');
+    if (deleteEmployeeForm) {
+        deleteEmployeeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const id = document.getElementById('id').value;
+
+            fetch(`${baseUrl}/${id}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Employee deleted:', data);
+                alert('Employee deleted successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error deleting employee.');
+            });
+        });
+    }
+});
 
 
 
