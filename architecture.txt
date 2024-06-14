@@ -271,5 +271,9 @@ INSERT 0 1
 INSERT 0 1
 
 Combien de tables ont été crée par le script ?
+***********
+Quelle est la requête que vous avez exécuter pour listez tous les employés
 
-Utilisez les chiffres ! Et pas d'espaces superflus !
+**Note** : Donnez la version la plus courte, en utilisant l'opérateur `*` pour la projection.
+
+**En minuscules ! Et pas d'espaces superflus !**
