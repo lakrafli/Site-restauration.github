@@ -356,4 +356,24 @@ Explication de la communication
         });
     }
 });
-
+index 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+    <h1>Employee Management</h1>
+    <nav>
+        <ul>
+            <li><a href="add_employee.html">Add Employee</a></li>
+            <li><a href="delete_employee.html">Delete Employee</a></li>
+        </ul>
+    </nav>
+    <!-- Other content -->
+    <script src="employee.js"></script>
+</body>
+</html>
