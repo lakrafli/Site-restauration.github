@@ -1,5 +1,20 @@
 js: employee.js;
-
+for (let i = 0; i < enployees.length; 1+)%
+console. Log (enpLoyees (1).ad);
+let elen = docunent.createElement (*L*):
+let eLen2 = document.createElement (*p'):
+elen2.textContent = enployees(1) .nane:
+let button = docunent.createElenent (*button"):
+button, textContent = "Suppetner":
+button.id = enployees (1).10;
+elen. append(elen2);
+elem. append (button):
+LIste-enployees.append (elen);
+LoadEmployees;
+21ste-employees. addEventListener ("cLick", function (event) ( if (event. target.nodeName (== "BUTTON") return; console. log( event.target.id);
+options = (J;
+options.del = true;
+simple_fetch("http://localhost:6480/t_api_rest/apt/employees/* + event. targat.a, ostian). Doelle
 document.addEventListener('DOMContentLoaded', function() {
     const baseUrl = 'http://IP_SERVEUR:PORT/tp_rest/api/employees';
 
