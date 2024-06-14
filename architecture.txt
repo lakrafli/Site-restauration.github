@@ -253,4 +253,20 @@ Note :
     les options de la commande psql respecterons l'ordre donnée en exemple.
     Vous refermerez la connexion après vos observations.
 
-./run_script_bd.sh tp4_app_rest_dockerise_etudiant_postgresql_1
+./run_script_bd.sh tp4_app_rest_dockerise_etudiant_postgresql_1 : ca ma donne ca :./run_script_bd.sh tp4_app_rest_dockerise_etudiant_postgresql_1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   614  100   614    0     0  18480      0 --:--:-- --:--:-- --:--:-- 18606
+employee_bd.sql
+psql:employee_bd.sql:1: NOTICE:  table "employee" does not exist, skipping
+DROP TABLE
+CREATE TABLE
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+INSERT 0 1
+
