@@ -253,4 +253,4 @@ Note :
     les options de la commande psql respecterons l'ordre donnée en exemple.
     Vous refermerez la connexion après vos observations.
 
-
+./run_script_bd.sh tp4_app_rest_dockerise_etudiant_postgresql_1
